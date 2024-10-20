@@ -7,7 +7,7 @@ CHROME_PATH="/opt/google/chrome/google-chrome"
 PROFILE_PATH="/home/avadhut/.config/google-chrome/Profile 3"
 
 # Open Chrome with the specified profile and URLs
-"$CHROME_PATH" --profile-directory="Profile 3" \
+"$CHROME_PATH" --profile-directory="Profile 28" \
     "https://chatgpt.com/c/66ea74a3-8850-8006-bed3-c944770feabb" \
     "http://103.191.208.239:8065/chintan/messages/@avadhut" &
 
