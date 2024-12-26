@@ -22,8 +22,8 @@ $selectedProfile = "Profile 4"
 $urls = @(
     "https://chatgpt.com/share/675054cb-75bc-8001-843b-1a865654967b",
     "https://codewithmosh.com/p/the-complete-node-js-course",
-    "http://103.191.208.239:8065/chintan/messages/@avadhut"
-    # ,"https://github.com/avadhutFrontEnd/react-projects"
+    "https://chat.chintandev.in/chintan/messages/@avadhut"
+    ,"https://github.com/avadhutFrontEnd/node/tree/05-express-advanced-topics-54m"
 )
 
 # Step 1: Open Chrome with Profile 4 and specified URLs
@@ -33,8 +33,8 @@ Write-Host "Chrome launched with profile: $selectedProfile"
 # Step 2: Open both directories in File Explorer
 # Fixed: Use explorer.exe with quoted paths for spaces
 Start-Process "explorer.exe" -ArgumentList "`"$courseDir`""
-$projectPath = "C:\Users\Avadhut\Desktop\git\1_React\react-projects"
-# Start-Process "explorer.exe" -ArgumentList "`"$projectPath`""
+$projectPath = "C:\Users\Avadhut\Desktop\git\4. Node\node"
+Start-Process "explorer.exe" -ArgumentList "`"$projectPath`""
 # Write-Host "File Explorer opened for both course and project directories"
 
 # Step 3: Open the specified directory in VS Code
