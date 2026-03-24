@@ -1,17 +1,14 @@
 # Store original location
 $originalLocation = Get-Location
 
-# Define paths
-$courseRoot = "C:\Users\Avadhut\Desktop\Courses\code with mosh\Code with Mosh - The Ultimate HTML CSS Mastery Series  [Hacksnation.com]"
-$courseDir = "$courseRoot\Part1  [Hacksnation.com]"
-$part2Dir = "$courseRoot\Part2  [Hacksnation.com]"
-$part3Dir = "$courseRoot\Part3  [Hacksnation.com]"
-$subtitlesDir = "$courseRoot\part_3_subtitles-20260221T134156Z-1-001\part_3_subtitles\subtitles\txt_files"
+# Define paths - Git course
+$courseRoot = "C:\Users\Avadhut\Desktop\Courses\code with mosh\CodeWithMosh - The Ultimate Git Course"
+$subtitlesDir = "C:\Users\Avadhut\Desktop\Courses\code with mosh\CodeWithMosh - The Ultimate Git Course\Subtitles"
 $potPlayerPath = "C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe"
 $chromeExe = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $chromeUserDataDir = "$env:LOCALAPPDATA\Google\Chrome\User Data"
 $selectedProfile = "Profile 4"
-$cursorNotesPath = "C:\Users\Avadhut\Desktop\OfficeDataGDriveSync\Obsidean\Avadhut Notes FolderSync\Avadhut Notes Google Drive\1. Web Development\1.HTML\5. Code With Mosh"
+$cursorNotesPath = "C:\Users\Avadhut\Desktop\OfficeDataGDriveSync\Obsidean\Avadhut Notes FolderSync\Avadhut Notes Google Drive\git\Code With Mosh\The Ultimate Git Course"
 $obsidianPath = "C:\Users\Avadhut\AppData\Local\Obsidian\Obsidian.exe"
 $monosnapPath = "C:\Users\Avadhut\AppData\Local\Monosnap\Monosnap.exe"
 
@@ -31,13 +28,13 @@ function Open-ChromeWithProfile {
 # Function to list videos in a directory
 function Show-Videos {
     param([string]$directory)
-    
+
     $videos = Get-ChildItem -Path $directory -Filter *.mp4 | Sort-Object Name
     if ($videos.Length -eq 0) {
         Write-Host "No MP4 files found in this directory."
         return $null
     }
-    
+
     Write-Host "Available video files:`n"
     for ($i = 0; $i -lt $videos.Length; $i++) {
         Write-Host "$($i + 1). $($videos[$i].Name)"
@@ -57,13 +54,18 @@ function Play-Video {
 }
 
 # Launch initial applications
-# Open Part3 and subtitles in Windows Explorer
-Start-Process "explorer.exe" -ArgumentList "`"$part3Dir`""
-Start-Process "explorer.exe" -ArgumentList "`"$subtitlesDir`""
-Write-Host "Opened Part3 and subtitles (txt_files) in File Explorer"
+# Open course root and subtitles in Windows Explorer
+Start-Process "explorer.exe" -ArgumentList "`"$courseRoot`""
+if (Test-Path $subtitlesDir) {
+    Start-Process "explorer.exe" -ArgumentList "`"$subtitlesDir`""
+    Write-Host "Opened course folder and Subtitles in File Explorer"
+} else {
+    Write-Host "Opened course folder in File Explorer (Subtitles path not found: $subtitlesDir)"
+}
 
 # Open Chrome with selected profile and specified URLs (user data dir ensures your profile, not guest)
 $urls = @(
+    "https://codewithmosh.com/p/the-ultimate-git-course",
     "https://chatgpt.com/c/66ea74a3-8850-8006-bed3-c944770feabb",
     "http://103.191.208.239:8065/chintan/messages/@avadhut",
     "https://claude.ai/new"
@@ -86,7 +88,7 @@ if (Test-Path $monosnapPath) {
     Write-Host "MonoSnap not found at $monosnapPath"
 }
 
-# Open Cursor in Code With Mosh notes folder
+# Open Cursor in Git course notes folder
 if (Test-Path $cursorNotesPath) {
     Start-Process "cursor" -ArgumentList "`"$cursorNotesPath`""
     Write-Host "Cursor launched with folder: $cursorNotesPath"
@@ -94,22 +96,22 @@ if (Test-Path $cursorNotesPath) {
     Write-Host "Cursor notes path not found: $cursorNotesPath"
 }
 
-# Main navigation loop (start in Part3)
-$current_dir = $part3Dir
+# Main navigation loop (start at course root)
+$current_dir = $courseRoot
 
 while ($true) {
     Write-Host "`nCurrent directory: $current_dir"
     Write-Host "Contents:"
-    
+
     # Get all items in current directory
     $items = Get-ChildItem $current_dir | Sort-Object Name
     for ($i = 0; $i -lt $items.Length; $i++) {
         Write-Host "$($i + 1). $($items[$i].Name)"
     }
-    
+
     Write-Host "`nEnter a number to select an item, 'b' to go back, or 'q' to quit:"
     $choice = Read-Host
-    
+
     switch -Regex ($choice) {
         '^q$' {
             Write-Host "Exiting script."
@@ -127,22 +129,9 @@ while ($true) {
             $selection = [int]$choice
             if ($selection -ge 1 -and $selection -le $items.Length) {
                 $selected_item = $items[$selection - 1]
-                
+
                 if ($selected_item.PSIsContainer) {
                     $current_dir = $selected_item.FullName
-                    
-                    # Open corresponding course website
-                    switch ($selected_item.Name) {
-                        "Part1  [Hacksnation.com]" {
-                            Open-ChromeWithProfile -ProfileName $selectedProfile -Urls @("https://codewithmosh.com/p/the-ultimate-html-css-part1")
-                        }
-                        "Part2  [Hacksnation.com]" {
-                            Open-ChromeWithProfile -ProfileName $selectedProfile -Urls @("https://codewithmosh.com/p/the-ultimate-html-css-part2")
-                        }
-                        "Part3  [Hacksnation.com]" {
-                            Open-ChromeWithProfile -ProfileName $selectedProfile -Urls @("https://codewithmosh.com/p/the-ultimate-html-css-part3")
-                        }
-                    }
                 }
                 elseif ($selected_item.Extension -eq ".mp4") {
                     do {
@@ -151,7 +140,7 @@ while ($true) {
                         Write-Host "1. Play another video from this folder"
                         Write-Host "2. Go back to folder navigation"
                         $next_action = Read-Host "Enter your choice (1 or 2)"
-                        
+
                         if ($next_action -eq "1") {
                             $videos = Show-Videos $current_dir
                             if ($videos -ne $null) {

@@ -1,5 +1,5 @@
 ﻿# ðŸ’¾ Storage Analysis Report
-**Generated on:** 2025-10-30 18:37:48
+**Generated on:** 2026-01-12 18:34:27
 **Computer:** LAPTOP-7VDFNRAK
 
 ---
@@ -8,27 +8,21 @@
 
 ### Drive C:
 - **Total Size:** 474.72 GB
-- **Used Space:** 440.74 GB (92.8%)
-- **Free Space:** 33.97 GB
-- **Status:** âš ï¸ Critical
-
-### Drive D:
-- **Total Size:** 28.66 GB
-- **Used Space:** 21.15 GB (73.8%)
-- **Free Space:** 7.5 GB
-- **Status:** âœ… Good
+- **Used Space:** 416.16 GB (87.7%)
+- **Free Space:** 58.55 GB
+- **Status:** âš ï¸ Warning
 
 ### Drive G:
 - **Total Size:** 15 GB
-- **Used Space:** 5.66 GB (37.7%)
-- **Free Space:** 9.34 GB
+- **Used Space:** 5.69 GB (37.9%)
+- **Free Space:** 9.31 GB
 - **Status:** âœ… Good
 
 ### Drive H:
-- **Total Size:** 15 GB
-- **Used Space:** 7.17 GB (47.8%)
-- **Free Space:** 7.83 GB
-- **Status:** âœ… Good
+- **Total Size:** 474.72 GB
+- **Used Space:** 419.09 GB (88.3%)
+- **Free Space:** 55.62 GB
+- **Status:** âš ï¸ Warning
 
 ---
 
@@ -36,18 +30,19 @@
 
 | # | Folder Path | Size (GB) | File Count |
 |---|------------|-----------|------------|
-| 1 | `C:\Users` | 247.49 | 1520517 |
-| 2 | `C:\Windows` | 37.66 | 196595 |
-| 3 | `C:\Program Files` | 23.95 | 94803 |
-| 4 | `C:\Program Files (x86)` | 3.52 | 2974 |
-| 5 | `C:\Drivers` | 1.61 | 1080 |
+| 1 | `C:\Users` | 233.76 | 1814591 |
+| 2 | `C:\Windows` | 27.9 | 149335 |
+| 3 | `C:\Program Files` | 24.12 | 103478 |
+| 4 | `C:\Program Files (x86)` | 3.48 | 3469 |
+| 5 | `C:\Drivers` | 1.62 | 1081 |
 | 6 | `C:\Python312` | 1.49 | 26935 |
-| 7 | `C:\data` | 0.3 | 54 |
+| 7 | `C:\data` | 0.3 | 55 |
 | 8 | `C:\Python313` | 0.14 | 5233 |
-| 9 | `C:\docker-data` | 0 | 3 |
-| 10 | `C:\PerfLogs` | 0 | 0 |
-| 11 | `C:\nvm4w` | 0 | 0 |
-| 12 | `C:\inetpub` | 0 | 0 |
+| 9 | `C:\tools` | 0.01 | 35 |
+| 10 | `C:\docker-data` | 0 | 3 |
+| 11 | `C:\inetpub` | 0 | 0 |
+| 12 | `C:\nvm4w` | 0 | 0 |
+| 13 | `C:\PerfLogs` | 0 | 0 |
 
 ---
 
@@ -55,27 +50,27 @@
 
 ### Windows Folders
 - **C:\Windows\Temp:** 0 GB
-- **C:\Windows\SoftwareDistribution:** 0.14 GB
-- **C:\Windows\Installer:** 1.69 GB
-- **C:\Windows\Logs:** 1.09 GB
+- **C:\Windows\SoftwareDistribution:** 0.05 GB
+- **C:\Windows\Installer:** 1.7 GB
+- **C:\Windows\Logs:** 0.08 GB
 
 ### User Folders
-- **C:\Users\Avadhut\Downloads:** 25.84 GB (10405 files)
-- **C:\Users\Avadhut\Documents:** 5.98 GB (5281 files)
-- **C:\Users\Avadhut\Pictures:** 0.12 GB (298 files)
-- **C:\Users\Avadhut\Videos:** 5.85 GB (11 files)
-- **C:\Users\Avadhut\Desktop:** 195.58 GB (1438515 files)
-- **C:\Users\Avadhut\AppData\Local\Temp:** 1.19 GB (1168 files)
+- **C:\Users\Avadhut\Downloads:** 17.6 GB (10466 files)
+- **C:\Users\Avadhut\Documents:** 5.87 GB (5283 files)
+- **C:\Users\Avadhut\Pictures:** 0.1 GB (293 files)
+- **C:\Users\Avadhut\Videos:** 0 GB (1 files)
+- **C:\Users\Avadhut\Desktop:** 195.34 GB (1728574 files)
+- **C:\Users\Avadhut\AppData\Local\Temp:** 4.6 GB (1830 files)
 
 ---
 
 ## ðŸ—‘ï¸ Temporary Files & Cache
 
-- **Browser Cache (Chrome):** 0.43 GB
+- **Browser Cache (Chrome):** 0.45 GB
 - **Recycle Bin:** 0 GB
-- **User Temp:** 1.19 GB
+- **User Temp:** 4.6 GB
 - **Windows Temp:** 0 GB
-- **Browser Cache (Edge):** 0.36 GB
+- **Browser Cache (Edge):** 0.39 GB
 
 ---
 
@@ -89,12 +84,12 @@
 | 2 | MongoDB 7.0.0 2008R2Plus SSL (64 bit) | 1642.38 |
 | 3 | McAfee® | 1116.36 |
 | 4 | MySQL Workbench 8.0 CE | 1115.21 |
-| 5 | MySQL Server 8.0 | 547.94 |
-| 6 | Windows Subsystem for Linux | 460.13 |
-| 7 | Java(TM) SE Development Kit 24.0.1 (64-bit) | 386.13 |
-| 8 | Cloudflare WARP | 320.17 |
-| 9 | Git | 319.38 |
-| 10 | Mozilla Firefox (x64 en-US) | 312.18 |
+| 5 | Cursor | 734.55 |
+| 6 | MySQL Server 8.0 | 547.94 |
+| 7 | Windows Subsystem for Linux | 460.13 |
+| 8 | Java(TM) SE Development Kit 24.0.1 (64-bit) | 386.13 |
+| 9 | Mozilla Firefox (x64 en-US) | 322.39 |
+| 10 | Cloudflare WARP | 320.17 |
 
 ---
 
@@ -131,21 +126,21 @@ cleanmgr /sagerun:1
 
 | Extension | File Count | Total Size (GB) |
 |-----------|------------|----------------|
-| *.mp4 | 1797 | 114.79 |
-| *.zip | 289 | 38.51 |
-| *.rar | 8 | 19.69 |
-| *.mkv | 11 | 9.31 |
-| No Extension | 63300 | 6.48 |
-| *.js | 791689 | 5.98 |
-| *.jpg | 10825 | 5.9 |
-| *.exe | 274 | 5.12 |
+| *.mp4 | 1882 | 113.79 |
+| *.zip | 306 | 29.37 |
+| *.rar | 6 | 17.47 |
+| *.js | 932914 | 7.15 |
+| *.jpg | 13212 | 6.17 |
+| *.mkv | 3 | 5.49 |
+| No Extension | 71892 | 5.47 |
+| *.exe | 311 | 5.4 |
 | *.tmp | 2 | 3.83 |
-| *.gz | 77 | 3.8 |
+| *.gz | 83 | 3.8 |
 | *.img | 5 | 2.87 |
 | *.whl | 43 | 2.74 |
 | *.qcow2 | 4 | 2.54 |
-| *.jar | 1595 | 2.26 |
-| *.png | 21594 | 2.23 |
+| *.png | 24619 | 2.42 |
+| *.jar | 1664 | 2.26 |
 
 ---
 

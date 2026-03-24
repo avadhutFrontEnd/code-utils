@@ -25,6 +25,8 @@ $urls = @(
     "https://chat.chintandev.in/chintan/channels/my-private-code-files"
     ,"https://github.com/avadhutFrontEnd/java"
     ,"https://drive.google.com/drive/folders/1AGeQqUjCzgAoYTHiN5OtHZ-do9-e29CW"
+    ,"https://grok.com/c/1e89a85b-ca39-4a83-bd8e-71c3e0ec1d8c?rid=b1636d41-7ef1-4786-a35e-acec18df2d08"
+    ,"https://claude.ai/new"
 )
 
 # Step 1: Open Chrome with Profile 4 and specified URLs
