@@ -1,4 +1,4 @@
-﻿# Git Repositories Report
+# Git Repositories Report
 
 > **Generated:** 2026-02-24 11:42:33
 > **Machine:** LAPTOP-7VDFNRAK
@@ -18,42 +18,44 @@
 
 ### Repos That Need Attention
 
-- **chaos-web** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\chaos-web` -- No need of commit (remote repo link remove) 
-- **HTML ( CWH & techgun ) Complete** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\copy create note from it\HTML ( CWH & techgun ) Complete`  -- No need of commit
-- **vidly-api-node** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\Courses\code with mosh\2) React\08 - Calling Backend Services (01h42m)\1- Section 8- Calling Backend Services\Section 8- Calling Backend Services\finish\vidly-api-node`  -- No need of commit
-- **vidly-api-node** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\Courses\code with mosh\2) React\08 - Calling Backend Services (01h42m)\1- Section 8- Calling Backend Services\Section 8- Calling Backend Services\start\vidly-api-node`  -- No need of commit
-- **vidly-api-node** -- no remote -- `C:\Users\Avadhut\Desktop\Courses\code with mosh\2) React\08 - Calling Backend Services (01h42m)\1- Section 8- Calling Backend Services\__MACOSX\Section 8- Calling Backend Services\finish\vidly-api-node`  -- No need of commit
-- **vidly-api-node** -- no remote -- `C:\Users\Avadhut\Desktop\Courses\code with mosh\2) React\08 - Calling Backend Services (01h42m)\1- Section 8- Calling Backend Services\__MACOSX\Section 8- Calling Backend Services\start\vidly-api-node`  -- No need of commit
-- **section4-react-app** -- no remote -- `C:\Users\Avadhut\Desktop\Courses\code with mosh\9) The Ultimate Docker Course\Codewithmosh.com - The Ultimate Docker Course\code\Section 4- Images\section4-react-app\section4-react-app`
-- **section4-react-app** -- no remote -- `C:\Users\Avadhut\Desktop\Courses\code with mosh\9) The Ultimate Docker Course\Codewithmosh.com - The Ultimate Docker Course\code\Section 4- Images\section4-react-app\__MACOSX\section4-react-app`  -- No need of commit
-- **full-stack-dev-2023** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\Courses\coderDost\full-stack-dev-2023`  -- No need of commit
-- **100-days-of-code** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\1_React\100-days-of-code` -- committed changes
-- **coding questions** -- uncommitted changes, no remote -- `C:\Users\Avadhut\Desktop\git\1_React\coding questions` -- No remote repo to push
-- **obsidian-code-runner** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\1_React\obsidian-code-runner`  -- committed changes
-- **react-typescript-class-function-practice** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\1_React\react-typescript-class-function-practice`
-- **rog-game-discovery-app** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\1_React\rog-game-discovery-app`
-- **code-utils** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\2. code-utils\code-utils`
-- **code** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\4. Node\code`
-- **MERN** -- uncommitted changes, no remote -- `C:\Users\Avadhut\Desktop\git\4. Node\MERN`
-- **node-api** -- uncommitted changes, no remote -- `C:\Users\Avadhut\Desktop\git\4. Node\node-api`
-- **5. HTML CSS JS** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\5. HTML CSS JS`
-- **7. Projects** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\7. Projects`
-- **bcai_figma_plugin** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\bcai\bcai_figma_plugin`
-- **home-cooperate** -- uncommitted changes, no remote -- `C:\Users\Avadhut\Desktop\git\bcai\home-cooperate`
-- **pixelplusaiv2_frontend** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\bcai\pixelplus-2--frontend\pixelplusaiv2_frontend`
-- **plain-html** -- uncommitted changes, no remote -- `C:\Users\Avadhut\Desktop\git\bcai\plain-html`
-- **chaos-web** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\chaos-web`
-- **deno-fresh-office-home-collab-work** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\deno-fresh-office-home-collab-work`
-- **file-server** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\file-server`
-- **prayojan2** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\FinAtoZ Prajoan-2\prayojan2\prayojan2` -- DELETED
-- **Frontend Practice** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\Frontend Practice`
-- **orderx** -- uncommitted changes -- `C:\Users\Avadhut\Desktop\git\orderx`
-- **deno-testing** -- no remote -- `C:\Users\Avadhut\Desktop\OfficeDataGDriveSync\deno-testing`
-- **project** -- uncommitted changes, no remote -- `C:\Users\Avadhut\Desktop\project`
-- **deno-testing** -- uncommitted changes -- `C:\Users\Avadhut\Documents\deno-testing\deno-testing`
-- **prayojan2** -- uncommitted changes -- `C:\Users\Avadhut\Documents\prayojan2` -- DELETED
-- **EcommerceNexus** -- no remote -- `C:\Users\Avadhut\Downloads\EcommerceNexus\EcommerceNexus`
-- **prayojan2** -- uncommitted changes -- `C:\Users\Avadhut\Downloads\FinAtoZ Office\prayojan2` -- DELETED
+| Repo | Path | Previous note | Commit status | Push status |
+|---|---|---|---|---|
+| chaos-web | `C:\Users\Avadhut\Desktop\chaos-web` | No need of commit (remote repo link remove) | Not attempted | Not attempted |
+| HTML ( CWH & techgun ) Complete | `C:\Users\Avadhut\Desktop\copy create note from it\HTML ( CWH & techgun ) Complete` | No need of commit | Not attempted | Not attempted |
+| vidly-api-node | `C:\Users\Avadhut\Desktop\Courses\code with mosh\2) React\08 - Calling Backend Services (01h42m)\1- Section 8- Calling Backend Services\Section 8- Calling Backend Services\finish\vidly-api-node` | No need of commit | Not attempted | Not attempted |
+| vidly-api-node | `C:\Users\Avadhut\Desktop\Courses\code with mosh\2) React\08 - Calling Backend Services (01h42m)\1- Section 8- Calling Backend Services\Section 8- Calling Backend Services\start\vidly-api-node` | No need of commit | Not attempted | Not attempted |
+| vidly-api-node | `C:\Users\Avadhut\Desktop\Courses\code with mosh\2) React\08 - Calling Backend Services (01h42m)\1- Section 8- Calling Backend Services\__MACOSX\Section 8- Calling Backend Services\finish\vidly-api-node` | No need of commit (no remote) | Not attempted | Not attempted |
+| vidly-api-node | `C:\Users\Avadhut\Desktop\Courses\code with mosh\2) React\08 - Calling Backend Services (01h42m)\1- Section 8- Calling Backend Services\__MACOSX\Section 8- Calling Backend Services\start\vidly-api-node` | No need of commit (no remote) | Not attempted | Not attempted |
+| section4-react-app | `C:\Users\Avadhut\Desktop\Courses\code with mosh\9) The Ultimate Docker Course\Codewithmosh.com - The Ultimate Docker Course\code\Section 4- Images\section4-react-app\section4-react-app` | No remote | Not attempted | Not attempted |
+| section4-react-app | `C:\Users\Avadhut\Desktop\Courses\code with mosh\9) The Ultimate Docker Course\Codewithmosh.com - The Ultimate Docker Course\code\Section 4- Images\section4-react-app\__MACOSX\section4-react-app` | No need of commit | Not attempted | Not attempted |
+| full-stack-dev-2023 | `C:\Users\Avadhut\Desktop\Courses\coderDost\full-stack-dev-2023` | No need of commit | Not attempted | Not attempted |
+| 100-days-of-code | `C:\Users\Avadhut\Desktop\git\1_React\100-days-of-code` | Already committed changes | Not attempted | Not attempted |
+| coding questions | `C:\Users\Avadhut\Desktop\git\1_React\coding questions` | No remote repo to push | Not attempted | Not attempted |
+| obsidian-code-runner | `C:\Users\Avadhut\Desktop\git\1_React\obsidian-code-runner` | Already committed changes | Not attempted | Not attempted |
+| react-typescript-class-function-practice | `C:\Users\Avadhut\Desktop\git\1_React\react-typescript-class-function-practice` | Uncommitted changes | Skipped (no local changes at run time) | Skipped |
+| rog-game-discovery-app | `C:\Users\Avadhut\Desktop\git\1_React\rog-game-discovery-app` | Uncommitted changes | Success | Success |
+| code-utils | `C:\Users\Avadhut\Desktop\git\2. code-utils\code-utils` | Uncommitted changes | Success | Success |
+| code | `C:\Users\Avadhut\Desktop\git\4. Node\code` | Uncommitted changes | Success | Success |
+| MERN | `C:\Users\Avadhut\Desktop\git\4. Node\MERN` | No remote | Not attempted | Not attempted |
+| node-api | `C:\Users\Avadhut\Desktop\git\4. Node\node-api` | No remote | Not attempted | Not attempted |
+| 5. HTML CSS JS | `C:\Users\Avadhut\Desktop\git\5. HTML CSS JS` | Uncommitted changes | Success | Success |
+| 7. Projects | `C:\Users\Avadhut\Desktop\git\7. Projects` | Uncommitted changes | Success | Success |
+| bcai_figma_plugin | `C:\Users\Avadhut\Desktop\git\bcai\bcai_figma_plugin` | Uncommitted changes | Success | Failed (remote timeout/access) |
+| home-cooperate | `C:\Users\Avadhut\Desktop\git\bcai\home-cooperate` | No remote | Not attempted | Not attempted |
+| pixelplusaiv2_frontend | `C:\Users\Avadhut\Desktop\git\bcai\pixelplus-2--frontend\pixelplusaiv2_frontend` | Uncommitted changes | Success | Failed (remote timeout/access) |
+| plain-html | `C:\Users\Avadhut\Desktop\git\bcai\plain-html` | No remote | Not attempted | Not attempted |
+| chaos-web | `C:\Users\Avadhut\Desktop\git\chaos-web` | Uncommitted changes | Success | Failed (remote timeout/access) |
+| deno-fresh-office-home-collab-work | `C:\Users\Avadhut\Desktop\git\deno-fresh-office-home-collab-work` | Uncommitted changes | Success | Success |
+| file-server | `C:\Users\Avadhut\Desktop\git\file-server` | Uncommitted changes | Success | Success |
+| prayojan2 | `C:\Users\Avadhut\Desktop\git\FinAtoZ Prajoan-2\prayojan2\prayojan2` | DELETED | Not attempted | Not attempted |
+| Frontend Practice | `C:\Users\Avadhut\Desktop\git\Frontend Practice` | Uncommitted changes | Success | Success |
+| orderx | `C:\Users\Avadhut\Desktop\git\orderx` | Uncommitted changes | Skipped (no local changes at run time) | Skipped |
+| deno-testing | `C:\Users\Avadhut\Desktop\OfficeDataGDriveSync\deno-testing` | No remote | Not attempted | Not attempted |
+| project | `C:\Users\Avadhut\Desktop\project` | No remote | Not attempted | Not attempted |
+| deno-testing | `C:\Users\Avadhut\Documents\deno-testing\deno-testing` | Uncommitted changes | Success | Failed (remote timeout/access) |
+| prayojan2 | `C:\Users\Avadhut\Documents\prayojan2` | DELETED | Not attempted | Not attempted |
+| EcommerceNexus | `C:\Users\Avadhut\Downloads\EcommerceNexus\EcommerceNexus` | No remote | Not attempted | Not attempted |
+| prayojan2 | `C:\Users\Avadhut\Downloads\FinAtoZ Office\prayojan2` | DELETED | Not attempted | Not attempted |
 
 ---
 
