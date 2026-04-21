@@ -34,7 +34,7 @@
 | obsidian-code-runner | `C:\Users\Avadhut\Desktop\git\1_React\obsidian-code-runner` | Already committed changes | Not attempted | Not attempted |
 | react-typescript-class-function-practice | `C:\Users\Avadhut\Desktop\git\1_React\react-typescript-class-function-practice` | Done — clean; `main` up to date with `origin/main` | N/A (clean) | Success (everything up-to-date) |
 | rog-game-discovery-app | `C:\Users\Avadhut\Desktop\git\1_React\rog-game-discovery-app` | Clean — `development/Course-1-React-18-for-Beginners-8-Building-a-Video-Game-Discovery-App-3h` in sync with `origin` | N/A (clean) | Success (up to date) |
-| code-utils | `C:\Users\Avadhut\Desktop\git\2. code-utils\code-utils` | **Dirty** — modified `Scripts/git-repos-report.md`; untracked `DesignPattern-course-setup-script/`, `video-downloader/` | Pending (uncommitted work) | Pending (commit then push) |
+| code-utils | `C:\Users\Avadhut\Desktop\git\2. code-utils\code-utils` | Completed — committed report updates + utility scripts and pushed to `origin/main` | Success | Success |
 | code | `C:\Users\Avadhut\Desktop\git\4. Node\code` | Clean — `feature/upload-rate-limiting-pagination` in sync with `origin` | N/A (clean) | Success (up to date) |
 | MERN | `C:\Users\Avadhut\Desktop\git\4. Node\MERN` | Remote added: `git@github.com:avadhutFrontEnd/MERN.git` | Success | Success |
 | node-api | `C:\Users\Avadhut\Desktop\git\4. Node\node-api` | Remote added: `git@github.com:avadhutFrontEnd/node-api-new.git` | Success | Success |
@@ -195,13 +195,13 @@
 |---|---|
 | Path | `C:\Users\Avadhut\Desktop\git\2. code-utils\code-utils` |
 | Branch | `main` |
-| Status | DIRTY |
+| Status | CLEAN |
 | Has Remote | Yes |
 | Remote URL | `https://github.com/avadhutFrontEnd/code-utils.git` |
-| Last Commit | `b90aad5` - new scripts added |
-| Total Commits | 18 |
-| Untracked Files | 2 (directories: `DesignPattern-course-setup-script/`, `video-downloader/`) |
-| Modified Files | 1 (`Scripts/git-repos-report.md`) |
+| Last Commit | `87e5684` - chore: update repo status report and add utility scripts |
+| Total Commits | 19 |
+| Untracked Files | 0 |
+| Modified Files | 0 |
 | Staged Files | 0 |
 | Stashes | 1 |
 
