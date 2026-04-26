@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { api } from "./api";
 
+const COLLAPSED_PATHS_STORAGE_KEY = "md-priority-collapsed-paths-v1";
+
 const CATEGORY_COLORS = {
   important: "#B8860B",
   reference: "#2563eb",
@@ -10,7 +12,16 @@ const CATEGORY_COLORS = {
 
 const CATEGORY_OPTIONS = ["important", "reference", "archive", "ignore"];
 
-function TreeNode({ node, marks, onMark, prefix = "", isLast = true, showRootPath = false }) {
+function TreeNode({
+  node,
+  marks,
+  onMark,
+  collapsedPaths,
+  onToggleCollapse,
+  prefix = "",
+  isLast = true,
+  showRootPath = false
+}) {
   const mark = marks[node.path];
   const category = mark?.category || null;
   const connector = isLast ? "\\--" : "|--";
@@ -20,6 +31,8 @@ function TreeNode({ node, marks, onMark, prefix = "", isLast = true, showRootPat
   const isDir = node.type === "directory";
   const typeIcon = isDir ? "📁" : "📄";
   const typeLabel = isDir ? "FOLDER" : "FILE";
+  const isCollapsed = isDir && collapsedPaths.has(node.path);
+  const collapseArrow = isDir ? (isCollapsed ? "▶" : "▼") : "";
 
   return (
     <>
@@ -28,11 +41,24 @@ function TreeNode({ node, marks, onMark, prefix = "", isLast = true, showRootPat
           {prefix}
           {connector}
         </span>
+        {isDir ? (
+          <button className="folder-toggle" onClick={() => onToggleCollapse(node.path)} title={isCollapsed ? "Show" : "Hide"}>
+            {collapseArrow}
+          </button>
+        ) : (
+          <span className="folder-toggle-placeholder" />
+        )}
         <span className={`type-badge ${isDir ? "folder-badge" : "file-badge"}`}>{typeLabel}</span>
         <span className="type-icon">{typeIcon}</span>
         <span className="node-name">
           {node.name}
           {node.type === "directory" ? "/" : ""}
+        </span>
+        <span
+          className={category ? "current-category has-value" : "current-category"}
+          style={category ? { borderColor: CATEGORY_COLORS[category], color: CATEGORY_COLORS[category] } : undefined}
+        >
+          {category || "unmarked"}
         </span>
         <div className="hover-actions">
           {CATEGORY_OPTIONS.map((item) => (
@@ -58,21 +84,24 @@ function TreeNode({ node, marks, onMark, prefix = "", isLast = true, showRootPat
         </div>
       )}
 
-      {children.map((child, index) => (
-        <TreeNode
-          key={child.path}
-          node={child}
-          marks={marks}
-          onMark={onMark}
-          prefix={childPrefix}
-          isLast={index === children.length - 1}
-        />
-      ))}
+      {!isCollapsed &&
+        children.map((child, index) => (
+          <TreeNode
+            key={child.path}
+            node={child}
+            marks={marks}
+            onMark={onMark}
+            collapsedPaths={collapsedPaths}
+            onToggleCollapse={onToggleCollapse}
+            prefix={childPrefix}
+            isLast={index === children.length - 1}
+          />
+        ))}
     </>
   );
 }
 
-function RootTree({ root, marks, onMark }) {
+function RootTree({ root, marks, onMark, collapsedPaths, onToggleCollapse }) {
   const children = root.children || [];
   const rootNode = {
     name: root.title,
@@ -83,7 +112,14 @@ function RootTree({ root, marks, onMark }) {
 
   return (
     <div className="root-block">
-      <TreeNode node={rootNode} marks={marks} onMark={onMark} showRootPath />
+      <TreeNode
+        node={rootNode}
+        marks={marks}
+        onMark={onMark}
+        collapsedPaths={collapsedPaths}
+        onToggleCollapse={onToggleCollapse}
+        showRootPath
+      />
     </div>
   );
 }
@@ -96,6 +132,16 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [backupResult, setBackupResult] = useState(null);
   const [error, setError] = useState("");
+  const [collapsedPaths, setCollapsedPaths] = useState(() => {
+    try {
+      const raw = window.localStorage.getItem(COLLAPSED_PATHS_STORAGE_KEY);
+      if (!raw) return new Set();
+      const parsed = JSON.parse(raw);
+      return new Set(Array.isArray(parsed) ? parsed : []);
+    } catch {
+      return new Set();
+    }
+  });
 
   async function loadAll() {
     try {
@@ -148,6 +194,23 @@ export default function App() {
       setError(err.message);
     }
   }
+
+  function handleToggleCollapse(path) {
+    setCollapsedPaths((prev) => {
+      const next = new Set(prev);
+      if (next.has(path)) next.delete(path);
+      else next.add(path);
+      return next;
+    });
+  }
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(COLLAPSED_PATHS_STORAGE_KEY, JSON.stringify(Array.from(collapsedPaths)));
+    } catch {
+      // Ignore storage write failures (private mode, quota, etc.)
+    }
+  }, [collapsedPaths]);
 
   const importantPaths = useMemo(
     () =>
@@ -207,7 +270,14 @@ export default function App() {
         <section className="panel">
           <input placeholder="Search by path or name..." value={query} onChange={(event) => setQuery(event.target.value)} />
           {filteredRoots.map((root) => (
-            <RootTree key={root.rootPath} root={root} marks={marks} onMark={handleMark} />
+            <RootTree
+              key={root.rootPath}
+              root={root}
+              marks={marks}
+              onMark={handleMark}
+              collapsedPaths={collapsedPaths}
+              onToggleCollapse={handleToggleCollapse}
+            />
           ))}
         </section>
       )}

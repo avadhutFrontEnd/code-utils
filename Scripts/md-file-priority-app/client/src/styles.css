@@ -97,6 +97,30 @@ label {
   color: #7c3aed;
 }
 
+.folder-toggle {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #22d3ee;
+  background: rgba(3, 10, 24, 0.9);
+  color: #67e8f9;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.folder-toggle:hover {
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.35);
+}
+
+.folder-toggle-placeholder {
+  width: 20px;
+  min-width: 20px;
+}
+
 .type-icon {
   width: 18px;
   text-align: center;
@@ -131,6 +155,23 @@ label {
   color: #e7f9ff;
   overflow-wrap: anywhere;
   white-space: nowrap;
+}
+
+.current-category {
+  margin-left: auto;
+  border: 1px dashed #64748b;
+  color: #94a3b8;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  text-transform: lowercase;
+  background: rgba(2, 10, 23, 0.7);
+}
+
+.current-category.has-value {
+  border-style: solid;
+  font-weight: 700;
+  background: rgba(2, 10, 23, 0.95);
 }
 
 .hover-actions {

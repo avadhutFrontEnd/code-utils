@@ -158,19 +158,91 @@ function flattenNodes(nodes, out = []) {
   return out;
 }
 
-function copyPath(src, dest) {
-  const stats = fs.statSync(src);
-  if (stats.isDirectory()) {
-    fs.mkdirSync(dest, { recursive: true });
-    const entries = fs.readdirSync(src, { withFileTypes: true });
-    for (const entry of entries) {
-      copyPath(path.join(src, entry.name), path.join(dest, entry.name));
-    }
-    return;
+const SKIP_NAMES = new Set([
+  ".git",
+  "node_modules",
+  ".next",
+  "dist",
+  "build",
+  ".cursor",
+  ".vscode"
+]);
+
+function isMarkdownFile(filePath) {
+  return path.extname(filePath).toLowerCase() === ".md";
+}
+
+function resolveImportantMarkdownFiles(startPath, summary, visitedRealPaths, reportNonMarkdown = true) {
+  const resolved = [];
+
+  if (!fs.existsSync(startPath)) {
+    summary.skipped.push({ source: startPath, reason: "Path does not exist" });
+    return resolved;
   }
 
-  fs.mkdirSync(path.dirname(dest), { recursive: true });
-  fs.copyFileSync(src, dest);
+  const baseName = path.basename(startPath);
+  if (SKIP_NAMES.has(baseName)) {
+    summary.skippedByRule.push({ source: startPath, reason: `Skipped by rule: ${baseName}` });
+    return resolved;
+  }
+
+  const stats = fs.lstatSync(startPath);
+  if (stats.isSymbolicLink()) {
+    summary.skippedByRule.push({ source: startPath, reason: "Skipped symbolic link/junction to avoid loops" });
+    return resolved;
+  }
+
+  if (stats.isFile()) {
+    if (isMarkdownFile(startPath)) {
+      resolved.push(startPath);
+    } else if (reportNonMarkdown) {
+      summary.skippedNonMarkdown.push({ source: startPath, reason: "Marked file is not .md" });
+    }
+    return resolved;
+  }
+
+  if (!stats.isDirectory()) {
+    summary.skipped.push({ source: startPath, reason: "Not a regular file/directory" });
+    return resolved;
+  }
+
+  let realPath = null;
+  try {
+    realPath = fs.realpathSync(startPath).toLowerCase();
+  } catch {
+    realPath = null;
+  }
+  if (realPath) {
+    if (visitedRealPaths.has(realPath)) return resolved;
+    visitedRealPaths.add(realPath);
+  }
+
+  const entries = fs.readdirSync(startPath, { withFileTypes: true });
+  for (const entry of entries) {
+    const child = path.join(startPath, entry.name);
+    if (SKIP_NAMES.has(entry.name)) {
+      summary.skippedByRule.push({ source: child, reason: `Skipped by rule: ${entry.name}` });
+      continue;
+    }
+    resolved.push(...resolveImportantMarkdownFiles(child, summary, visitedRealPaths, false));
+  }
+
+  return resolved;
+}
+
+function copyFilePath(srcFile, destFile, summary) {
+  fs.mkdirSync(path.dirname(destFile), { recursive: true });
+  fs.copyFileSync(srcFile, destFile);
+  summary.copiedFileCount += 1;
+}
+
+function clearDirectoryContents(dirPath) {
+  if (!fs.existsSync(dirPath)) return;
+  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(dirPath, entry.name);
+    fs.rmSync(fullPath, { recursive: true, force: true });
+  }
 }
 
 ensureStateFiles();
@@ -250,38 +322,70 @@ app.get("/api/important", (_req, res) => {
 });
 
 app.post("/api/backup/run", (req, res) => {
-  const { dryRun = false } = req.body || {};
+  const { dryRun = false, clearOutput = true } = req.body || {};
   const marks = readJson(marksPath);
   const { backupOutputPath } = readJson(settingsPath);
   if (!backupOutputPath) return res.status(400).json({ error: "backupOutputPath is empty in settings." });
 
-  const importantPaths = Object.entries(marks.items)
+  const importantMarkedPaths = Object.entries(marks.items)
     .filter(([, value]) => value?.category === "important")
     .map(([key]) => normalizeSlashes(key))
     .filter((filePath) => fs.existsSync(filePath));
 
   const copied = [];
-  const skipped = [];
+  const summary = {
+    copiedFileCount: 0,
+    skippedByRule: [],
+    skippedNonMarkdown: [],
+    skipped: [],
+    outputCleared: false
+  };
 
   fs.mkdirSync(backupOutputPath, { recursive: true });
+  if (!dryRun && clearOutput) {
+    clearDirectoryContents(backupOutputPath);
+    summary.outputCleared = true;
+  }
 
-  for (const source of importantPaths) {
-    const safeName = source.replace(/[:\\\/]/g, "_");
+  const visitedRealPaths = new Set();
+  const candidateMarkdownFiles = [];
+  for (const markedPath of importantMarkedPaths) {
+    candidateMarkdownFiles.push(...resolveImportantMarkdownFiles(markedPath, summary, visitedRealPaths, true));
+  }
+
+  const uniqueFiles = [];
+  const uniqueSet = new Set();
+  for (const filePath of candidateMarkdownFiles) {
+    const key = normalizeSlashes(filePath).toLowerCase();
+    if (uniqueSet.has(key)) continue;
+    uniqueSet.add(key);
+    uniqueFiles.push(filePath);
+  }
+
+  for (const sourceFile of uniqueFiles) {
+    const safeName = sourceFile.replace(/[:\\\/]/g, "_");
     const destination = path.join(backupOutputPath, safeName);
-    if (dryRun) {
-      copied.push({ source, destination, dryRun: true });
-      continue;
-    }
-
     try {
-      copyPath(source, destination);
-      copied.push({ source, destination });
+      if (!dryRun) {
+        copyFilePath(sourceFile, destination, summary);
+      }
+      copied.push({ source: sourceFile, destination, dryRun });
     } catch (error) {
-      skipped.push({ source, reason: error.message });
+      summary.skipped.push({ source: sourceFile, reason: error.message });
     }
   }
 
-  return res.json({ copied, skipped, totalImportant: importantPaths.length, dryRun });
+  return res.json({
+    copied,
+    skipped: summary.skipped,
+    skippedByRule: summary.skippedByRule,
+    skippedNonMarkdown: summary.skippedNonMarkdown,
+    copiedFileCount: summary.copiedFileCount,
+    totalImportant: importantMarkedPaths.length,
+    resolvedMarkdownFiles: uniqueFiles.length,
+    outputCleared: summary.outputCleared,
+    dryRun
+  });
 });
 
 app.listen(PORT, () => {

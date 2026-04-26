@@ -1,5 +1,462 @@
 {
   "version": 1,
-  "updatedAt": null,
-  "items": {}
+  "updatedAt": "2026-04-26T14:00:58.089Z",
+  "items": {
+    "C:\\Users\\Avadhut\\.ghcp-appmod": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\.gradle": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\.quokka": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\CrossDevice": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\404 Page Lost in Space - Nothing4us": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\chaos-web": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\chintan prj": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\Chintan Web Site": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\CoderDostRedux Code": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\Courses": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\fresh-project": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\100-days-of-code": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\coding questions": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\game-hub": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\Frontend-Developer-Interview-Preparation-Matrix": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\counter-app": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\mern-typescript": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\my-react-work": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\neon-code-scribe": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\obsidian-code-runner": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\React Practice": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\react-projects\\scripts": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\react-projects": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\react-ts-part-2": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\react-typescript-class-function-practice": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\reminders-app": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\rog-game-discovery-app": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React\\vidly-api-node": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\2. code-utils\\code-utils\\Java-code with mosh\\java\\JavaCourse": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\2. code-utils\\code-utils\\Tier 1 company projects": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\2. code-utils": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\1_React": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\business-lounge": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\Mongodb-server": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\Mongodb-server\\mongodb-authentication-guide.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\Mongodb-server\\mongodb-database-guide.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\Mongodb-server\\mongoose-connection-options.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\Mongodb-server\\server-mongodb.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\postgreSQL-server": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\postgreSQL-server\\server-postgresql.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\postgreSQL-server\\setup-postgres-pgadmin-docker.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\libraries-documentation.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\server-flow-architecture.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code\\upload-rate-limiting-pagination.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\code": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\MERN": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\NestJS": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\NestJS\\user-management-api\\docs\\IMPLEMENTATION-GUIDE.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\NestJS\\libraries-documentation.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\NestJS\\user-management-api\\docs": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\NestJS\\user-management-api\\docs\\PROJECT-OVERVIEW.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\NestJS\\user-management-api\\docs\\README.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\NestJS\\user-management-api\\README.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\NestJS\\README.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\node": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\Node practice": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\Node Projects\\api.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\Node Projects": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\node-api\\todo.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\node-api\\weather.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\node-api": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\reminders-api": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\PERN": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\4. Node\\Socket-IO": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\7. Projects": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\8. Java Spring Boot": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\9. backend-practice": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\bcai_figma_plugin": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\figma-plugin": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\home-cooperate": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\1_Login_Register_Authentication_Authorization.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\2_Client_Ads_Creation_Approval_Flow.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\3_Concept_Genie_Flow.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\4_Compliance_Genie_Flow.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\5_Marketing_Genie_Flow.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\6_Brand_Kit_Genie_Flow.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\7_Settings_Subscription_Flow.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\FLOW_COVERAGE_ANALYSIS.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\Step 1.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\Interview\\TEMPLATE_EDITING_FLOW.md": {
+      "category": "important",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\pixelplus-2--backend": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\pixelplus-2--frontend": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\bcai\\plain-html": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\chaos-web": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\Deno-and-TailwindCSS-": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\deno-fresh-office-home-collab-work": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\file-server": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\git_learning": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\latest chaos- New UI created by Amit sir, Last push by Amit sir Work ?": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\latest chaos-frontend by anish & saurabh , Deno-kv & Table Updated code is here   Work ?": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\latest chaos-frontend by Avadhut, Last push by Avadhut  ( Postgres ) Work  ?": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\orderx": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\orderx-shopfront-ui": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\Portfolio": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\SCAI_V2.0": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\git\\tier-1-company-projects": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\lighthouse_project": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\mattermost_backup": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\MK Sir's Notes": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\movie": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\Notes": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\OfficeDataGDriveSync": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\React folder": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\Redux": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\syntax": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\Trash Bin ???": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\whisper_setup": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Desktop\\whisper_windows": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Documents": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Downloads": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\OneDrive": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\Pictures": {
+      "category": "ignore",
+      "note": ""
+    },
+    "C:\\Users\\Avadhut\\sql-learning-app": {
+      "category": "ignore",
+      "note": ""
+    }
+  }
 }
