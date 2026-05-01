@@ -9,6 +9,7 @@ $chromeExe = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $chromeUserDataDir = "$env:LOCALAPPDATA\Google\Chrome\User Data"
 $selectedProfile = "Profile 4"
 $cursorNotesPath = "C:\Users\Avadhut\Desktop\OfficeDataGDriveSync\Obsidean\Avadhut Notes FolderSync\Avadhut Notes Google Drive\1. Web Development\14. CWM - The Ultimate Design Pattern Series"
+$cursorPracticePath = "C:\Users\Avadhut\Desktop\git\design-patterns-practice"
 $obsidianPath = "C:\Users\Avadhut\AppData\Local\Obsidian\Obsidian.exe"
 $monosnapPath = "C:\Users\Avadhut\AppData\Local\Monosnap\Monosnap.exe"
 
@@ -120,6 +121,14 @@ if (Test-Path $cursorNotesPath) {
     Write-Host "Cursor launched with folder: $cursorNotesPath"
 } else {
     Write-Host "Cursor notes path not found: $cursorNotesPath"
+}
+
+# Open Cursor in practice repository workspace
+if (Test-Path $cursorPracticePath) {
+    Start-Process "cursor" -ArgumentList "`"$cursorPracticePath`""
+    Write-Host "Cursor launched with folder: $cursorPracticePath"
+} else {
+    Write-Host "Cursor practice path not found: $cursorPracticePath"
 }
 
 Write-Host "`n--- All applications launched ---`n" -ForegroundColor Green
